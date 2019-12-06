@@ -8,6 +8,7 @@ import 'tinymce/plugins/code';
 import 'tinymce/plugins/table';
 import 'tinymce/plugins/textcolor';
 import 'tinymce/plugins/lists';
+import './plugins/responsivefilemanager';
 
 $(document).ready(function(){
 
@@ -43,7 +44,10 @@ $(document).ready(function(){
         if (typeof tinymce_setup_callback !== "undefined") {
             tinymce_setup_callback(editor);
         }
-    }
+    },
+    external_filemanager_path:"/filemanager/",
+    filemanager_title:"Responsive Filemanager" ,
+    external_plugins: { "filemanager" : "/filemanager/plugin.min.js"},
   });
 
 });
